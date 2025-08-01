@@ -1,0 +1,59 @@
+html{
+       scroll-behavior: smooth;
+}
+ 
+/* Animate image pop/bounce on hover */
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  animation: popImage 0.4s ease;
+}
+
+/* Touch-friendly pop for mobile */
+.card-img-top:active {
+  animation: popImage 0.4s ease;
+}
+
+@keyframes popImage {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Sidebar cart styles */
+/* Cart Sidebar */
+/* Sidebar cart styling */
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background: white;
+  border-left: 2px solid #ccc;
+  padding: 15px;
+  z-index: 2000;
+  display: none;
+  overflow-y: auto;
+}
+
+#cart-sidebar h4 {
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
